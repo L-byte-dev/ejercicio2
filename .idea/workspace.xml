@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c117de4-9236-4f07-a0cf-6d765efeed44" name="Changes" comment="" />
+    <list default="true" id="8c117de4-9236-4f07-a0cf-6d765efeed44" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ejercicio2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ejercicio2/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ejercicio2/domain/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ejercicio2/domain/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ejercicio2/servicio/carrito/CarritoServicioImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ejercicio2/servicio/carrito/CarritoServicioImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ejercicio2/servicio/pedido/PedidoServicioImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ejercicio2/servicio/pedido/PedidoServicioImpl.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,10 +24,14 @@
       </list>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2Xcea0TWcIQfzJNmQCcf3IbXJW0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -30,7 +40,9 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/LUCAS/Desktop/informatorio-2023-javab",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/LUCAS/IdeaProjects/ejercicio2",
     "onboarding.tips.debug.path": "C:/Users/LUCAS/IdeaProjects/ejercicio2/src/Main.java"
   }
 }]]></component>
@@ -63,6 +75,19 @@
       <option name="presentableId" value="Default" />
       <updated>1698932856842</updated>
     </task>
+    <task id="LOCAL-00001" summary="Primer Commit">
+      <option name="closed" value="true" />
+      <created>1698935361847</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1698935361847</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Primer Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Primer Commit" />
   </component>
 </project>

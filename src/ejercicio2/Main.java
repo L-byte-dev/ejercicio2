@@ -3,16 +3,14 @@ package ejercicio2;
 import ejercicio2.basededatos.BdProductos;
 import ejercicio2.domain.Carrito;
 import ejercicio2.domain.Cliente;
-import ejercicio2.domain.Pedido;
 import ejercicio2.domain.Producto;
 import ejercicio2.entrada.InputConsoleService;
-import ejercicio2.enums.EstadoPedido;
 import ejercicio2.servicio.carrito.CarritoServicio;
 import ejercicio2.servicio.carrito.CarritoServicioImpl;
 import ejercicio2.servicio.menu.MenuCompra;
 import ejercicio2.servicio.menu.MenuCompraImpl;
+import ejercicio2.servicio.pedido.PedidoServicio;
 import ejercicio2.servicio.pedido.PedidoServicioImpl;
-import ejercicio2.servicio.producto.ProductoServicio;
 import ejercicio2.servicio.producto.ProductoServicioImpl;
 import ejercicio2.servicio.stock.StockServicioImpl;
 
@@ -30,11 +28,12 @@ public class Main {
         cliente.setNombre("Ian");
         cliente.setDireccion("Calle falsa 123");
         cliente.setEmail("CorreoFalso@gmail.com");
-        cliente.setCarrito(new Carrito());
+        cliente.setCarrito();
         carritoEnCurso = cliente.getCarrito();
 
-        CarritoServicio carritoServicio = new CarritoServicioImpl(new StockServicioImpl(),
-                new PedidoServicioImpl());
+        PedidoServicio pedidoServicio = new PedidoServicioImpl(cliente);
+        CarritoServicio carritoServicio = new CarritoServicioImpl(cliente.getCarrito(), new StockServicioImpl(),
+                pedidoServicio);
         MenuCompra menuCompra = new MenuCompraImpl(new ProductoServicioImpl());
 
         int opc;
@@ -51,7 +50,6 @@ public class Main {
             switch (opc){
                 case 1:
                     getAllProducts();
-                    System.out.println("Ver productos");
                     break;
                 case 2:
                     Optional<Producto> productoOptional = menuCompra.seleccionarProducto();
@@ -69,7 +67,7 @@ public class Main {
                     }
                     break;
                 case 4:
-                    System.out.println("Ver compras realizadas");
+                    pedidoServicio.elegirEstadoPedido();
                     break;
                 case 0:
                     System.out.println("Salir");
@@ -79,7 +77,6 @@ public class Main {
             }
 
         }while (opc != 0);
-
         InputConsoleService.closeScanner();
     }
 
@@ -89,13 +86,5 @@ public class Main {
             listaProductos.append(String.format("ID[%d] %s: %s, %fUSD | stock %d.\n", p.getId(), p.getNombre(), p.getDescription(), p.getPrecio(), p.getStock()));
         }
         System.out.println(listaProductos);
-    }
-
-    public static Carrito getCarritoEnCurso() {
-        return carritoEnCurso;
-    }
-
-    public static void setCarritoEnCurso(Carrito carritoEnCurso) {
-        Main.carritoEnCurso = carritoEnCurso;
     }
 }

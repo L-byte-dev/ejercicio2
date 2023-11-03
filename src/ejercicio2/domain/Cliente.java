@@ -2,6 +2,7 @@ package ejercicio2.domain;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Cliente {
     private Long id;
@@ -66,7 +67,13 @@ public class Cliente {
         return carrito;
     }
 
-    public void setCarrito(Carrito carrito) {
-        this.carrito = carrito;
+    public void setCarrito() {
+        long id;
+        if (Objects.isNull(this.carrito)){
+            id = 1L;
+        } else {
+            id = this.getCarrito().getId() + 1L;
+        }
+        this.carrito = new Carrito(id,this);
     }
 }
